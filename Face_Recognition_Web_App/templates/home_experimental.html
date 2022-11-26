@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Face Recognition Machine</title>
+</head>
+
+<body>
+  <h1>Face Recognition Machine</h1>
+  <button type="button" onclick="window.location.href='http://127.0.0.1:5000/';">Home</button>
+
+<br>
+  <br>
+<!--<form id="package_form" action="/uploader" method="POST">
+<div>
+   <p>Upload Packages:</p>
+   <p><input id="upload_button" type="file" class="btn btn-default btn-xs" name="file_upload"></p>
+   <p><input id="submit_button" type="submit" class="btn btn-success" value="Upload">
+</div>
+
+<button type="button" onclick="window.location.href='http://127.0.0.1:5000/';">Home</button>
+-->
+  <p> Select the Unknown Image:</p>
+<form action = "/success" method = "post" enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <input type = "submit" value="Upload Unknown Image">
+    <!--<p>File name: {{filen}} succesfully uploaded</p> -->
+</form>
+
+
+<form action="/delete" method="post">
+  <button name="del" type="submit">Delete Unknown Image </button>
+
+</form>
+
+<!-- Copy format above but for Known folder browse and upload -->
+<p>Select the Known Image:</p>
+  <form action = "/successk" method = "post" enctype="multipart/form-data">
+    <input type="file" name="filek" />
+    <input type = "submit" value="Upload Known Image ">
+    <!--<p>File name: {{filen}} succesfully uploaded</p> -->
+</form>
+
+
+<!--<form action="/deletek" method="post"> -->
+  <!--<button name="delk" type="submit">Delete Known</button> -->
+
+<!--</form> -->
+
+<p>Use the Upload Known button if you are absolutely sure you want to do that. Deleting this file will have to be done manually with authorised permission</p>
+
+
+<form action="/face_rec/" method="post">
+  <button name="facerec" type="submit">Scan for Criminals</button>
+</form>
+
+
+
+
+
+
+  <image src= /static/images/{{image_1}}>
+
+  <br>
+  <p>{{MATCH}}</p>
+
+</body>
+
+</html>
